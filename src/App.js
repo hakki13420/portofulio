@@ -1,24 +1,62 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import About from './components/about/About';
+import Header from './components/header/Header';
+import Knowledges from './components/knowledges/Knowledges';
+import Nav from './components/nav/Nav';
+import StaticImage from './components/staticImage/StaticImage';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
-function App() {
+import themeData from './data/themes.json'
+
+
+
+function App() {  
+  const [actualTheme, setActualTheme]=React.useState(0)
+  const [theme, setTheme]=React.useState(themeData[0])
+
+  const myTimeOut=React.useRef(null)
+
+  const updateThemeIndice=async ()=>{
+    if(actualTheme<themeData.length-1){
+      await setActualTheme((theme)=>theme+1);
+    }else{
+      await setActualTheme(0);
+    }
+  }
+  const updateTheme=async()=>{
+    await setTheme({...themeData[actualTheme]})
+  }
+
+  React.useEffect(() => {
+    console.log('effect')
+      if (myTimeOut.current) {
+          clearTimeout(myTimeOut.current);
+      }
+      myTimeOut.current=setTimeout(() => {            
+         updateThemeIndice();
+         updateTheme();
+        console.log(theme)
+        document.documentElement.style.setProperty('--bg-color',theme.bgColor);
+        document.documentElement.style.setProperty('--bg-color-light',theme.bgColorLight);
+        document.documentElement.style.setProperty('--border-color',theme.borderColor);
+        document.documentElement.style.setProperty('--border-color',theme.borderColor);
+
+      }, 6000);
+  }, [theme])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Nav />
+      <About />
+      <Knowledges />
+      <StaticImage />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 

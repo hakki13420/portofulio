@@ -1,0 +1,7 @@
+.staticImage{
+    background-image: url('../../assets/wd.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: currentColor;
+    height:45rem;
+}

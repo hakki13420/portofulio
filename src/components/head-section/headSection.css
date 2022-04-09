@@ -1,0 +1,17 @@
+.headSection {        
+    margin-top:2rem;
+    padding: 1rem 2rem;
+}
+
+.headSection h3{  
+    color:var(--color-white);  
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.headSection h5{
+    letter-spacing: 1.1rem;
+    margin-top: 2rem;
+    text-align: center;
+}

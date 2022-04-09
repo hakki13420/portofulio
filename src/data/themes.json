@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "name":"theme1",
+        "bgColor":"#E7717D",
+        "bgColorLight":"#df3e4e9f",
+        "borderColor":"#be434f9f",
+        "primaryColor":"#66FCF1",
+        "colorWhite":"#FFF",
+        "colorWhiteLight":"rgba(255, 255, 255, 0.712)"
+    },
+    {
+        "id":2,
+        "name":"theme2",
+        "bgColor":"#CD7D66",
+        "bgColorLight":"#673e4e9f",
+        "borderColor":"#ee434f9f",
+        "primaryColor":"#22FCF1",
+        "colorWhite":"#FFF",
+        "colorWhiteLight":"rgba(255, 255, 255, 0.712)"
+    },
+    {
+        "id":3,
+        "name":"theme3",
+        "bgColor":"#E77100",
+        "bgColorLight":"#FFC300",
+        "borderColor":"#ee434f9f",
+        "primaryColor":"#77FCF1",
+        "colorWhite":"#FFF",
+        "colorWhiteLight":"rgba(255, 255, 255, 0.712)"
+    },
+    {
+        "id":4,
+        "name":"theme3",
+        "bgColor":"#5463FF",
+        "bgColorLight":"#af3e4e9f",
+        "borderColor":"#ee434f9f",
+        "primaryColor":"#77FCF1",
+        "colorWhite":"#FFF",
+        "colorWhiteLight":"rgba(255, 255, 255, 0.712)"
+    }
+]
