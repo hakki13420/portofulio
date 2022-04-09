@@ -17,12 +17,39 @@ header > h5{
     letter-spacing: 1.1rem;    
     margin-bottom:1rem;    
 }
-header > img{
+header .avatar{
+    position: relative;
+    transition:var(--transition);
+}
+header img{
+    top: 0;
     border: 5px solid var(--bg-color-light);
     border-radius: 50%;
     width: 15rem;
-}
+    backface-visibility: hidden;    
 
+}
+header .avatar:hover{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+
+}
+header .avatar .back{
+    position:absolute;
+    top: 0;
+    border: 5px solid var(--bg-color-light);
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    left:50%;
+    transform: translateX(-50%) rotateY(180deg);;
+    background: teal;
+    color:var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
 /*/===============MEDIA QUERIES===============*/
 
 @media screen and (max-width:600px){
@@ -35,7 +62,11 @@ header > img{
         letter-spacing: 1rem;    
         font-size:.8rem;    
     }
-    header > img{        
+    header img{        
         width: 12rem;
     }   
+    header .avatar .back{
+        width: 12rem;
+        height: 12rem;
+    }
 }

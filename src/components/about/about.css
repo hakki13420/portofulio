@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     gap:2rem;
     margin-top: 2rem;
-}
+}  
 .about .about__img{
     background:var(--bg-color-light);
     border-radius:3rem;
@@ -54,4 +54,27 @@
 .about__details p{
     line-height: 2rem;
     text-align: justify;
+}
+
+
+/*==================MEDIA QUERIES==================*/
+
+@media screen and (max-width:1080px){
+    .about{
+        display: grid;        
+        grid-template-columns: 1fr;
+    }
+    
+    .about__details .about__card{
+        display: grid;
+        grid-template-columns: 1fr;       
+    }
+    .card h4{
+        font-size: 1.5rem;
+    }
+    .about__details p{
+        line-height: 1.5rem;
+        margin-top: 1rem;
+    }
+       
 }

@@ -46,3 +46,27 @@
 .contact form div{    
     background:var(--color-white);
 }
+
+/*=======================MEADIA QUERIES================*/
+@media screen and (max-width:600px){
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact .contact-icones{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact-icones-item svg{
+        font-size: 4rem;    
+    }
+    .contact-icones-item p{
+        font-size: .7rem;    
+    }
+    
+    .contact form{
+        padding:1rem 1rem ;
+    }
+        
+}

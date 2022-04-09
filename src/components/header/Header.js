@@ -6,7 +6,12 @@ const Header = () => {
         <header id='/'>
           <h3>HAKKI Rabah</h3>
           <h5>Web Developer</h5>
-          <img src={ME} alt="me" />
+          <div className="avatar">
+            <img src={ME} alt="me" />
+            <div className="back">
+              <p>Web developer</p>
+            </div>
+          </div>
         </header>
     )
 }

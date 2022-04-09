@@ -30,6 +30,7 @@ body{
   font-family: 'Indie Flower', cursive;
   font-family: 'Poppins', sans-serif;
   background: var(--bg-color);
+  perspective: 500px;
 }
 
 section{

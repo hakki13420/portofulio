@@ -29,3 +29,23 @@
     height: 2rem;
     border-bottom: 1px solid #FFF;
 }
+
+/*==================MEDIA QUERIES=====================*/
+@media screen and (max-width:1140px){
+ 
+    .knowledge{
+        display: grid;
+        grid-template-columns: 1fr;
+    }      
+    .knowledge-item{
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: flex-start;
+     } 
+     .knowledge h4{
+        position: static;        
+        grid-area:auto;        
+    }
+
+}
