@@ -30,20 +30,20 @@ function App() {
   }
 
   React.useEffect(() => {
-    console.log('effect')
+    
       if (myTimeOut.current) {
           clearTimeout(myTimeOut.current);
       }
       myTimeOut.current=setTimeout(() => {            
          updateThemeIndice();
          updateTheme();
-        console.log(theme)
+    
         document.documentElement.style.setProperty('--bg-color',theme.bgColor);
         document.documentElement.style.setProperty('--bg-color-light',theme.bgColorLight);
         document.documentElement.style.setProperty('--border-color',theme.borderColor);
         document.documentElement.style.setProperty('--border-color',theme.borderColor);
 
-      }, 6000);
+      }, 30000);
   }, [theme])
 
 
